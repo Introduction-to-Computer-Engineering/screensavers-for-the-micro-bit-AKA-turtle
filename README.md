@@ -109,11 +109,23 @@ This assignment asks you to design a program and implement it in micro:bit JavaS
 
 ### SS 1
 
-_[Your description of screensaver 1]_
+creates an alternating wave of sprites
 
 ### SS 2 
 
-_[And so on]_
+creates randoms pixel plots with random brightness
+
+### SS 3
+
+someone let a fly in the house
+
+### SS 4 
+
+makes firework explosions
+
+### SS 5 
+
+creates horizontal lines of random brightness (isn't working like it should)
 
 ## Demo URL
 
