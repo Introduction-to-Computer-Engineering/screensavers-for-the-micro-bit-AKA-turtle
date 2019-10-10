@@ -11,7 +11,7 @@ input.onButtonPressed(Button.B, function () { //to wake
     isSleeping = false
 })
 
-//gesture handlers
+//gestures
 input.onGesture(Gesture.Shake, function () {
     currentSS = 0
 })
@@ -31,7 +31,7 @@ input.onGesture(Gesture.LogoDown, function () {
 //screensaver switch
 
 let isSleeping = false
-isSleeping = false    //starts in awake state
+isSleeping = false
 let currentSS = 0
 
 basic.forever(function () {
@@ -124,6 +124,7 @@ function ss1() { //creates an alternating wave of sprites
     wave3.delete()
     wave4.delete()
     wave5.delete()
+    basic.clearScreen()
 }
 
 function ss2() { //creates randoms pixel plots with random brightness
@@ -141,7 +142,7 @@ function ss2() { //creates randoms pixel plots with random brightness
         led.plotBrightness(x, y, B)
         basic.pause(10)
     }
-
+    basic.clearScreen()
 }
 
 function ss3() { //someone let a fly in the house
@@ -176,6 +177,7 @@ function ss3() { //someone let a fly in the house
     sprite.delete() //aka clear screen for sprites
     sprite2.delete()
     sprite3.delete()
+    basic.clearScreen()
 }
 
 function ss4() { //makes firework explosions
@@ -207,20 +209,22 @@ function ss4() { //makes firework explosions
             basic.pause(delay * 5)
         }
     }
+    basic.clearScreen()
 }
 
 function ss5() { //creates horizontal lines of random brightness
-    // game.startStopwatch()
-    //  while (game.currentTime() < 5000) {
-    let Lumens = [0, 10, 30, 80, 255]; //brightness array
-    for (let y = 0; y < 5; y++) {
-        let B = Lumens[Math.randomRange(0, 4)] //picks random element of 5 brightness levels
-        basic.pause(50) //verticle animation
+    game.startStopwatch()
+    while (game.currentTime() < 5000) {
+        let Lumens = [0, 10, 30, 80, 255]; //brightness array
+        for (let y = 0; y < 5; y++) {
+            let B = Lumens[Math.randomRange(0, 4)] //picks random element of 5 brightness levels
+            basic.pause(50) //verticle animation
 
-        for (let x = 0; x < 5; x++) {
-            basic.pause(30) //gives horizontal animation
-            led.plotBrightness(x, y, B)
+            for (let x = 0; x < 5; x++) {
+                basic.pause(30) //gives horizontal animation
+                led.plotBrightness(x, y, B)
+            }
         }
     }
+    basic.clearScreen()
 }
-
