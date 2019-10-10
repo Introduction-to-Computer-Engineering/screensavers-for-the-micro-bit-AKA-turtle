@@ -130,3 +130,5 @@ creates horizontal lines of random brightness (isn't working like it should)
 ## Demo URL
 
 https://imgur.com/gallery/OZdM0L0
+
+note: b does wake it up. video got clipped
